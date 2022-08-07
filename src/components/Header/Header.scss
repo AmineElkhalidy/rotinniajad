@@ -1,0 +1,11 @@
+.header {
+  width: 100%;
+  background-color: var(--first-color);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: var(--z-fixed);
+  transition: 0.4s;
+}
