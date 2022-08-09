@@ -8,7 +8,6 @@
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #1a102f;
   --first-color-alt: #281746;
   --first-color-light: #413160;
@@ -17,7 +16,7 @@
   --title-color: #fff;
   --text-color: #e6e6e6;
   --text-color-light: #fdfdfd;
-  --body-color: #f3f1f1;
+  --body-color: #f1f3f5;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -40,7 +39,7 @@
 }
 
 /* Responsive typography */
-@media screen and (min-width: 968px) {
+@media screen and (min-width: 767px) {
   :root {
     --biggest-font-size: 4rem;
     --h1-font-size: 2.25rem;
@@ -64,6 +63,7 @@ html {
 }
 
 body {
+  margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -98,6 +98,10 @@ button {
   border: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
@@ -110,16 +114,26 @@ button {
 }
 
 .section {
-  padding: 4.5rem 0 2rem;
+  padding: 2.5rem 0 1rem;
 }
 
 .section__title {
   font-size: var(--h2-font-size);
   margin-bottom: 1rem;
+
+  text-align: center;
 }
 
 .section__title span {
-  color: var(--second-color);
+  background: rgb(251, 168, 31);
+  background: linear-gradient(
+    90deg,
+    rgba(251, 168, 31, 1) 0%,
+    rgba(248, 117, 55, 1) 87%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .section__subtitle {
@@ -143,4 +157,11 @@ button {
   border-radius: 1.5rem;
 
   transition: 0.3s;
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

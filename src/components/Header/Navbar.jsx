@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 
 // Routing
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 // Icons
 import { AiOutlineClose, AiOutlineMenuFold } from "react-icons/ai";
@@ -10,14 +10,86 @@ import { AiOutlineClose, AiOutlineMenuFold } from "react-icons/ai";
 const Navbar = () => {
   // Menu state
   const [open, setOpen] = useState(false);
+  const [limit, setLimit] = useState(false);
+
+  useEffect(() => {
+    function handleWindowResize() {
+      const { innerWidth } = window;
+      if (innerWidth >= 767) {
+        setLimit(true);
+      }
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   return (
     <nav className="nav container">
       <Link to="/" className="nav__logo">
-        Rotin
+        Rotin Niajad
       </Link>
 
-      {open ? (
+      <div className="nav__toggle" onClick={() => setOpen(true)}>
+        <AiOutlineMenuFold />
+      </div>
+
+      <div className="nav__menu-desktop">
+        <ul className="nav__list-desktop">
+          <li className="nav__item-desktop">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "active" : "nav__link-desktop"
+              }
+              onClick={() => setOpen(false)}
+            >
+              Home
+            </NavLink>
+          </li>
+
+          <li className="nav__item-desktop">
+            <NavLink
+              to="/products"
+              className={({ isActive }) =>
+                isActive ? "active" : "nav__link-desktop"
+              }
+              onClick={() => setOpen(false)}
+            >
+              Products
+            </NavLink>
+          </li>
+
+          <li className="nav__item-desktop">
+            <NavLink
+              to="/aboutus"
+              className={({ isActive }) =>
+                isActive ? "active" : "nav__link-desktop"
+              }
+              onClick={() => setOpen(false)}
+            >
+              About Us
+            </NavLink>
+          </li>
+
+          <li className="nav__item-desktop">
+            <NavLink
+              to="/contactus"
+              className={({ isActive }) =>
+                isActive ? "active" : "nav__link-desktop"
+              }
+              onClick={() => setOpen(false)}
+            >
+              Contact Us
+            </NavLink>
+          </li>
+        </ul>
+      </div>
+
+      {open && (
         <div className="nav__menu">
           <ul className="nav__list">
             <li className="nav__item">
@@ -57,16 +129,9 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div
-            className="nav__close"
-            onClick={() => setOpen((prevState) => !prevState)}
-          >
+          <div className="nav__close" onClick={() => setOpen(false)}>
             <AiOutlineClose />
           </div>
-        </div>
-      ) : (
-        <div className="nav__toggle" onClick={() => setOpen(true)}>
-          <AiOutlineMenuFold />
         </div>
       )}
     </nav>

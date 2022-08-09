@@ -4,18 +4,29 @@ import "./Home.scss";
 // Routing
 import { Link } from "react-router-dom";
 
+// Motion
+import { motion } from "framer-motion";
+
 // Icons
 import { FaCouch } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <section className="home section">
+    <section className="home">
       <div className="home__container container grid">
-        <div className="home__image">
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          animate={{ x: [100, 0] }}
+          className="home__image"
+        >
           <FaCouch />
-        </div>
+        </motion.div>
 
-        <div className="home__data">
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          animate={{ x: [-100, 0] }}
+          className="home__data"
+        >
           <h1 className="home__title">
             Welcome to <span>Rotin</span>
           </h1>
@@ -24,10 +35,12 @@ const Home = () => {
             The best place to shop home furniture.
           </p>
 
-          <Link to="/products" className="button home__button">
-            Get Started
-          </Link>
-        </div>
+          <motion.div whileHover={{ scale: 1.1 }}>
+            <Link to="/products" className="button home__button">
+              Get Started
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
