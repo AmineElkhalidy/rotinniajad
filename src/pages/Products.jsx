@@ -1,6 +1,9 @@
 import React from "react";
 import "./Products.scss";
 
+// Images
+import { images } from ".";
+
 // Product
 import { Product } from "../components";
 
@@ -11,7 +14,11 @@ const Products = () => {
         Our <span>Products</span>
       </h2>
 
-      <div className="products__container container grid"></div>
+      <div className="products__container container grid">
+        {images.map((image, index) => (
+          <Product key={index} image={image} />
+        ))}
+      </div>
     </section>
   );
 };

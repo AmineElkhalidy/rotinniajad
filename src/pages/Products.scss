@@ -1,4 +1,24 @@
 .products {
   background-color: var(--first-color);
-  height: calc(100vh - var(--header-height));
+  min-height: calc(100vh - var(--header-height));
+}
+
+.products__container {
+  align-items: center;
+  justify-items: center;
+
+  gap: 1rem 0;
+
+  @media screen and (min-width: 650px) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 950px) {
+    & {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }

@@ -159,6 +159,13 @@ button {
   transition: 0.3s;
 }
 
+@media screen and (max-width: 300px) {
+  .container {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .container {
     margin-right: auto;
