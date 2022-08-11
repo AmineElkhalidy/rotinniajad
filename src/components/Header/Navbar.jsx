@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 
 // Routing
@@ -10,22 +10,6 @@ import { AiOutlineClose, AiOutlineMenuFold } from "react-icons/ai";
 const Navbar = () => {
   // Menu state
   const [open, setOpen] = useState(false);
-  const [limit, setLimit] = useState(false);
-
-  useEffect(() => {
-    function handleWindowResize() {
-      const { innerWidth } = window;
-      if (innerWidth >= 767) {
-        setLimit(true);
-      }
-    }
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
 
   return (
     <nav className="nav container">

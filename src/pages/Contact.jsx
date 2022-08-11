@@ -10,9 +10,9 @@ import { useForm, ValidationError } from "@formspree/react";
 const Contact = () => {
   const [state, handleSubmit] = useForm("xpznzzen");
 
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
+  // if (state.succeeded) {
+  //   return <p>Thanks for joining!</p>;
+  // }
 
   useEffect(() => {
     const inputs = document.querySelectorAll(".input");
@@ -92,57 +92,68 @@ const Contact = () => {
           <span className="circle one"></span>
           <span className="circle two"></span>
 
-          <form
-            action="https://formspree.io/f/xpznzzen"
-            method="POST"
-            autoComplete="off"
-            onSubmit={handleSubmit}
-          >
-            <h3 className="title">Contact us</h3>
-            <div className="input-container">
-              <input type="text" name="fullname" className="input" required />
-              <label for="">Full Name</label>
-              <span>Username</span>
-              <ValidationError
-                prefix="Fullname"
-                field="fullname"
-                errors={state.errors}
-              />
-            </div>
-            <div className="input-container">
-              <input type="email" name="email" className="input" required />
-              <label for="">Email</label>
-              <span>Email</span>
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-              />
-            </div>
-            <div className="input-container">
-              <input type="tel" name="phone" className="input" required />
-              <label for="">Phone</label>
-              <span>Phone</span>
-              <ValidationError
-                prefix="Phone"
-                field="phone"
-                errors={state.errors}
-              />
-            </div>
-            <div className="input-container textarea">
-              <textarea name="message" className="input" required></textarea>
-              <label for="">Message</label>
-              <span>Message</span>
-              <ValidationError
-                prefix="Message"
-                field="message"
-                errors={state.errors}
-              />
-            </div>
-            <button className="button form__button">
-              Send <i class="ri-send-plane-line"></i>
-            </button>
-          </form>
+          {!state.succeeded ? (
+            <form
+              action="https://formspree.io/f/xpznzzen"
+              method="POST"
+              autoComplete="off"
+              onSubmit={handleSubmit}
+            >
+              <h3 className="title">Contact us</h3>
+              <div className="input-container">
+                <input type="text" name="fullname" className="input" required />
+                <label for="">Full Name</label>
+                <span>Username</span>
+                <ValidationError
+                  prefix="Fullname"
+                  field="fullname"
+                  errors={state.errors}
+                />
+              </div>
+              <div className="input-container">
+                <input type="email" name="email" className="input" required />
+                <label for="">Email</label>
+                <span>Email</span>
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                />
+              </div>
+              <div className="input-container">
+                <input type="tel" name="phone" className="input" required />
+                <label for="">Phone</label>
+                <span>Phone</span>
+                <ValidationError
+                  prefix="Phone"
+                  field="phone"
+                  errors={state.errors}
+                />
+              </div>
+              <div className="input-container textarea">
+                <textarea name="message" className="input" required></textarea>
+                <label for="">Message</label>
+                <span>Message</span>
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                />
+              </div>
+              <button
+                type="submit"
+                className="button form__button"
+                disabled={state.submitting}
+              >
+                Send <i class="ri-send-plane-line"></i>
+              </button>
+            </form>
+          ) : (
+            <p className="form__message">
+              Thank you for your message, we will get in touch with you as soon
+              as possible
+            </p>
+          )}
         </div>
       </motion.div>
     </motion.div>

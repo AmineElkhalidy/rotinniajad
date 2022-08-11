@@ -9,6 +9,10 @@
 
   border-radius: 0.5rem;
 
+  &__buttons-container {
+    display: none;
+  }
+
   &__buttons {
     width: 100%;
     height: 100%;
@@ -22,8 +26,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-
-    display: none;
   }
 
   &__button {
@@ -48,12 +50,12 @@
     }
   }
 
-  &:hover &__buttons {
-    display: flex;
+  &:hover &__buttons-container {
+    display: block;
   }
 
-  &:active &__buttons {
-    display: flex;
+  &:active &__buttons-container {
+    display: block;
   }
 
   @media screen and (max-width: 350px) {

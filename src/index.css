@@ -1,26 +1,32 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 /*=============== SPLASH FONT ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Splash&display=swap");
+
+/*=============== KAUSHAN SCRIPT FONT ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
 
+  /* #1a102f */
   /*========== Colors ==========*/
-  --first-color: #1a102f;
-  --first-color-alt: #281746;
-  --first-color-light: #413160;
-  --first-color-lighten: #6b5f83;
-  --second-color: #dc582a;
+  --first-color: #120b21;
+  --first-color-alt: #1a102f;
+  --first-color-light: #281746;
+  --first-color-lighten: #413160;
+  --second-color: #fd7e14;
   --title-color: #fff;
-  --text-color: #e6e6e6;
-  --text-color-light: #fdfdfd;
+  --text-color: #ced4da;
+  --text-color-light: #e9ecef;
   --body-color: #f1f3f5;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
+  --second-font: "Kaushan Script", cursive;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -63,12 +69,11 @@ html {
 }
 
 body {
-  margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: var(--first-color);
   color: var(--text-color);
-  transition: 0.3s; /* For animation dark mode */
+  transition: 0.3s;
 }
 
 h1,
@@ -92,7 +97,8 @@ img {
 }
 
 input,
-button {
+button,
+textarea {
   font-family: var(--body-font);
   outline: none;
   border: none;
@@ -114,7 +120,7 @@ button {
 }
 
 .section {
-  padding: 2.5rem 0 1rem;
+  padding: 4.5rem 0 2rem;
 }
 
 .section__title {
@@ -140,6 +146,8 @@ button {
   display: block;
   font-size: var(--small-font-size);
   color: var(--second-color);
+
+  font-family: var(--second-font);
 }
 
 .main {
@@ -166,7 +174,7 @@ button {
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1024px) {
   .container {
     margin-right: auto;
     margin-left: auto;
