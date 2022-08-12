@@ -1,6 +1,9 @@
 import React from "react";
 import "./Products.scss";
 
+// motion
+import { motion } from "framer-motion";
+
 // Images
 import { images } from ".";
 
@@ -11,14 +14,17 @@ const Products = () => {
   return (
     <section className="products section">
       <h2 className="section__title products__title">
-        Our <span>Products</span>
+        Nos <span>Produits</span>
       </h2>
 
-      <div className="products__container container grid">
+      <motion.div
+        whileInView={{ opacity: [0, 1] }}
+        className="products__container container grid"
+      >
         {images.map((image, index) => (
           <Product key={index} image={image} />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

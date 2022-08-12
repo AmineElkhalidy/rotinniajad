@@ -1,10 +1,19 @@
 import React from "react";
 import "./Product.scss";
 
+// motion
+import { motion } from "framer-motion";
+
 const Product = ({ image }) => {
   return (
-    <article className="card">
-      <img src={image} alt="The product image..." className="card__img" />
+    <motion.article
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 0.5 }}
+      itemScope
+      itemType="https://schema.org/Product"
+      className="card"
+    >
+      <img itemProp="image" src={image} alt="Salon" className="card__img" />
 
       <div className="card__buttons-container">
         <div className="card__buttons">
@@ -16,7 +25,7 @@ const Product = ({ image }) => {
           </a>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 };
 

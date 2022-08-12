@@ -4,6 +4,9 @@ import "./Navbar.scss";
 // Routing
 import { Link, NavLink } from "react-router-dom";
 
+// Motion
+import { motion } from "framer-motion";
+
 // Icons
 import { AiOutlineClose, AiOutlineMenuFold } from "react-icons/ai";
 
@@ -31,7 +34,7 @@ const Navbar = () => {
               }
               onClick={() => setOpen(false)}
             >
-              Home
+              Accueil
             </NavLink>
           </li>
 
@@ -43,7 +46,7 @@ const Navbar = () => {
               }
               onClick={() => setOpen(false)}
             >
-              Products
+              Produits
             </NavLink>
           </li>
 
@@ -55,7 +58,7 @@ const Navbar = () => {
               }
               onClick={() => setOpen(false)}
             >
-              About Us
+              À propos
             </NavLink>
           </li>
 
@@ -67,18 +70,22 @@ const Navbar = () => {
               }
               onClick={() => setOpen(false)}
             >
-              Contact Us
+              Contactez-nous
             </NavLink>
           </li>
         </ul>
       </div>
 
       {open && (
-        <div className="nav__menu">
+        <motion.div
+          whileInView={{ x: [5, 0] }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="nav__menu"
+        >
           <ul className="nav__list">
             <li className="nav__item">
               <Link to="/" className="nav__link" onClick={() => setOpen(false)}>
-                Home
+                Accueil
               </Link>
             </li>
 
@@ -88,7 +95,7 @@ const Navbar = () => {
                 className="nav__link"
                 onClick={() => setOpen(false)}
               >
-                Products
+                Produits
               </Link>
             </li>
 
@@ -98,7 +105,7 @@ const Navbar = () => {
                 className="nav__link"
                 onClick={() => setOpen(false)}
               >
-                About Us
+                À propos de nous
               </Link>
             </li>
 
@@ -108,7 +115,7 @@ const Navbar = () => {
                 className="nav__link"
                 onClick={() => setOpen(false)}
               >
-                Contact Us
+                Contactez-nous
               </Link>
             </li>
           </ul>
@@ -116,7 +123,7 @@ const Navbar = () => {
           <div className="nav__close" onClick={() => setOpen(false)}>
             <AiOutlineClose />
           </div>
-        </div>
+        </motion.div>
       )}
     </nav>
   );

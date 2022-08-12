@@ -10,10 +10,6 @@ import { useForm, ValidationError } from "@formspree/react";
 const Contact = () => {
   const [state, handleSubmit] = useForm("xpznzzen");
 
-  // if (state.succeeded) {
-  //   return <p>Thanks for joining!</p>;
-  // }
-
   useEffect(() => {
     const inputs = document.querySelectorAll(".input");
 
@@ -42,10 +38,11 @@ const Contact = () => {
           animate={{ y: [100, 0] }}
           className="contact-info"
         >
-          <h3 className="title">Let's get in touch</h3>
+          <h3 className="title">Prenons contact</h3>
           <p className="text">
-            If you liked our products, do not hesitate to contact us using the
-            following resources and we will handle the rest...
+            Si vous avez aimé nos produits, n'hésitez pas à nous contacter en
+            utilisant les ressources suivantes et nous nous occuperons du
+            reste...
           </p>
 
           <div className="info">
@@ -73,7 +70,7 @@ const Contact = () => {
           </div>
 
           <div className="social-media">
-            <p>Connect with us :</p>
+            <p>Connectez-vous avec nous sur:</p>
             <div className="social-icons">
               <a href="https://www.facebook.com/RotinNiajad/" target="_blank">
                 <i class="ri-facebook-line"></i>
@@ -99,11 +96,11 @@ const Contact = () => {
               autoComplete="off"
               onSubmit={handleSubmit}
             >
-              <h3 className="title">Contact us</h3>
+              <h3 className="title">Contactez-nous</h3>
               <div className="input-container">
                 <input type="text" name="fullname" className="input" required />
-                <label for="">Full Name</label>
-                <span>Username</span>
+                <label for="">Nom complet</label>
+                <span>Nom Complet</span>
                 <ValidationError
                   prefix="Fullname"
                   field="fullname"
@@ -122,8 +119,8 @@ const Contact = () => {
               </div>
               <div className="input-container">
                 <input type="tel" name="phone" className="input" required />
-                <label for="">Phone</label>
-                <span>Phone</span>
+                <label for="">Téléphone</label>
+                <span>Téléphone</span>
                 <ValidationError
                   prefix="Phone"
                   field="phone"
@@ -145,14 +142,16 @@ const Contact = () => {
                 className="button form__button"
                 disabled={state.submitting}
               >
-                Send <i class="ri-send-plane-line"></i>
+                Envoyer <i class="ri-send-plane-line"></i>
               </button>
             </form>
           ) : (
-            <p className="form__message">
-              Thank you for your message, we will get in touch with you as soon
-              as possible
-            </p>
+            <div className="form__message">
+              <h2>
+                Thank you for your message, we will get in touch with you as
+                soon as possible
+              </h2>
+            </div>
           )}
         </div>
       </motion.div>

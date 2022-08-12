@@ -4,11 +4,8 @@ export { default as Contact } from "./Contact";
 export { default as About } from "./About";
 
 // Images
-import Salon0 from "../assets/images/couch-00.jpg";
 import Salon1 from "../assets/images/couch-01.jpg";
 import Salon2 from "../assets/images/couch-02.jpg";
-import Salon3 from "../assets/images/couch-03.jpg";
-import Salon4 from "../assets/images/couch-04.jpg";
 import Salon5 from "../assets/images/couch-05.jpg";
 import Salon6 from "../assets/images/couch-06.jpg";
 import Salon7 from "../assets/images/couch-07.jpg";
@@ -44,44 +41,59 @@ import Salon36 from "../assets/images/couch-36.jpg";
 import Salon37 from "../assets/images/couch-37.jpg";
 import Salon38 from "../assets/images/couch-38.jpg";
 
+// Chair
+import Chair1 from "../assets/images/chair-01.jpg";
+import Chair2 from "../assets/images/chair-02.jpg";
+
+// Tables
+import Table0 from "../assets/images/table-00.jpg";
+import Table1 from "../assets/images/table-01.jpg";
+import Table3 from "../assets/images/table-03.jpg";
+import Table4 from "../assets/images/table-04.jpg";
+import Table5 from "../assets/images/table-05.jpg";
+
 export const images = [
-  Salon0,
+  Salon11,
+  Chair1,
+  Table0,
+  Salon12,
+  Salon13,
+  Table1,
+  Salon16,
+  Salon17,
+  Chair2,
+  Salon19,
+  Table3,
+  Salon21,
+  Salon22,
+  Salon23,
+  Salon24,
+  Table4,
+  Salon26,
+  Salon27,
+  Table5,
+  Salon28,
+  Salon29,
+  Salon30,
+  Salon31,
+  Salon32,
+  Salon35,
+  Salon36,
+  Salon37,
+  Salon38,
   Salon1,
   Salon2,
-  Salon3,
-  Salon4,
   Salon5,
   Salon6,
   Salon7,
   Salon8,
   Salon9,
   Salon10,
-  Salon11,
-  Salon12,
-  Salon13,
   Salon14,
   Salon15,
-  Salon16,
-  Salon17,
   Salon18,
-  Salon19,
   Salon20,
-  Salon21,
-  Salon22,
-  Salon23,
-  Salon24,
   Salon25,
-  Salon26,
-  Salon27,
-  Salon28,
-  Salon29,
-  Salon30,
-  Salon31,
-  Salon32,
   Salon33,
   Salon34,
-  Salon35,
-  Salon36,
-  Salon37,
-  Salon38,
 ];
