@@ -148,8 +148,8 @@ const Contact = () => {
           ) : (
             <div className="form__message">
               <h2>
-                Thank you for your message, we will get in touch with you as
-                soon as possible
+                Merci pour votre message, nous vous recontacterons dans les plus
+                brefs délais.
               </h2>
             </div>
           )}

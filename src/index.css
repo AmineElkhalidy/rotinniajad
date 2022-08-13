@@ -64,6 +64,14 @@
   margin: 0;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   scroll-behavior: smooth;
 }

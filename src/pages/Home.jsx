@@ -12,36 +12,38 @@ import { FaCouch } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <section className="home">
-      <div className="home__container container grid">
-        <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          animate={{ x: [100, 0] }}
-          className="home__image"
-        >
-          <FaCouch />
-        </motion.div>
-
-        <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          animate={{ x: [-100, 0] }}
-          className="home__data"
-        >
-          <h2 className="home__subtitle">Bienvenue à</h2>
-          <h1 className="home__title">Rotin Niajad</h1>
-
-          <p className="home__description">
-            Le meilleur endroit pour acheter des meubles de maison.
-          </p>
-
-          <motion.div whileHover={{ scale: 1.1 }}>
-            <Link to="/products" className="button home__button">
-              Commencer
-            </Link>
+    <>
+      <section className="home">
+        <div className="home__container container grid">
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            animate={{ x: [100, 0] }}
+            className="home__image"
+          >
+            <FaCouch />
           </motion.div>
-        </motion.div>
-      </div>
-    </section>
+
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            animate={{ x: [-100, 0] }}
+            className="home__data"
+          >
+            <h2 className="home__subtitle">Bienvenue à</h2>
+            <h1 className="home__title">Rotin Niajad</h1>
+
+            <p className="home__description">
+              Le meilleur endroit pour acheter des meubles de maison.
+            </p>
+
+            <motion.div whileHover={{ scale: 1.1 }} whileFocus={{ scale: 1.1 }}>
+              <Link to="/products" className="button home__button">
+                Commencer
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 };
 
