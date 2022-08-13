@@ -48,7 +48,8 @@
 
   &__button {
     border: 2px solid #fba81f;
-    &:hover {
+    &:hover,
+    &:active {
       border: none;
       background-image: linear-gradient(
         90deg,
