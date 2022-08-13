@@ -8,7 +8,7 @@ import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // Icons
-import { AiOutlineClose, AiOutlineMenuFold } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
   // Menu state
@@ -21,7 +21,7 @@ const Navbar = () => {
       </Link>
 
       <div className="nav__toggle" onClick={() => setOpen(true)}>
-        <AiOutlineMenuFold />
+        <AiOutlineMenu />
       </div>
 
       <div className="nav__menu-desktop">
