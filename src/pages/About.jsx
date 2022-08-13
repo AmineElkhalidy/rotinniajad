@@ -20,11 +20,19 @@ const About = () => {
             <p className="about__description">
               Rotin Niajad est un ensemble de personnes qualifiées, réunies pour
               fabriquer des produits maison époustouflants, livrés aux clients
-              avec la meilleure qualité
+              avec la meilleure qualité.
             </p>
           </div>
 
           <img src={AboutImg} alt="Le magasin" className="about__img" />
+        </div>
+
+        <div className="video__container">
+          <iframe
+            className="video"
+            src="https://www.youtube.com/embed/DNlwRlHQ-Qk?autoplay=1&mute=1"
+            frameborder="0"
+          ></iframe>
         </div>
 
         {/* <div className="profile">
