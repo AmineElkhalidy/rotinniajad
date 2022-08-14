@@ -3,6 +3,9 @@ import "./About.scss";
 
 import AboutImg from "../assets/images/rotin.jpg";
 
+// motion
+import { motion } from "framer-motion";
+
 const About = () => {
   return (
     <section className="about section">
@@ -11,7 +14,11 @@ const About = () => {
       </h2>
 
       <div className="about__container container grid">
-        <div className="about__data grid">
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          animate={{ y: [-100, 0] }}
+          className="about__data grid"
+        >
           <div className="about__content ">
             <h3 className="about__title">
               <span>R</span>o<span>t</span>in <span>N</span>i<span>a</span>ja
@@ -25,41 +32,19 @@ const About = () => {
           </div>
 
           <img src={AboutImg} alt="Le magasin" className="about__img" />
-        </div>
+        </motion.div>
 
-        <div className="video__container">
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          animate={{ y: [100, 0] }}
+          className="video__container"
+        >
           <iframe
             className="video"
             src="https://www.youtube.com/embed/DNlwRlHQ-Qk?autoplay=1&mute=1"
-            frameborder="0"
+            frameBorder="0"
           ></iframe>
-        </div>
-
-        {/* <div className="profile">
-          <img src={AboutImg} alt="Profile" className="profile__img" />
-
-          <div className="profile__data">
-            <h3 className="profile__name">Omar Haqouq</h3>
-            <p className="profile__description">Le gérant de Rotin Niajad</p>
-
-            <div className="profile__info">
-              <div>
-                <span className="profile__info-title">10+</span>
-                <span className="profile__info-name">
-                  Years <br />
-                  experience
-                </span>
-              </div>
-
-              <div>
-                <span className="profile__info-title">50+</span>
-                <span className="profile__info-name">
-                  Completed <br /> project
-                </span>
-              </div>
-            </div>
-          </div>
-        </div> */}
+        </motion.div>
       </div>
     </section>
   );

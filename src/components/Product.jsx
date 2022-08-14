@@ -18,15 +18,15 @@ const Product = ({ image }) => {
       <div className="card__buttons-container">
         <div className="card__buttons">
           <a href="tel: +212707090524" className="card__button">
-            <i class="ri-smartphone-line"></i>
+            <i className="ri-smartphone-line"></i>
           </a>
 
           <a href="tel: +212521005667" className="card__button">
-            <i class="ri-phone-line"></i>
+            <i className="ri-phone-line"></i>
           </a>
 
           <a href="https://wa.me/212705099002" className="card__button">
-            <i class="ri-whatsapp-line"></i>
+            <i className="ri-whatsapp-line"></i>
           </a>
         </div>
       </div>

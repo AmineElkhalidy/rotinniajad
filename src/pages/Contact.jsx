@@ -35,7 +35,7 @@ const Contact = () => {
       <motion.div className="form">
         <motion.div
           whileInView={{ opacity: [0, 1] }}
-          animate={{ y: [100, 0] }}
+          animate={{ x: [-100, 0] }}
           className="contact-info"
         >
           <h3 className="title">Prenons contact</h3>
@@ -73,19 +73,23 @@ const Contact = () => {
             <p>Connectez-vous avec nous sur:</p>
             <div className="social-icons">
               <a href="https://www.facebook.com/RotinNiajad/" target="_blank">
-                <i class="ri-facebook-line"></i>
+                <i className="ri-facebook-line"></i>
               </a>
               <a href="https://www.instagram.com/rotin_niajad/" target="_blank">
-                <i class="ri-instagram-line"></i>
+                <i className="ri-instagram-line"></i>
               </a>
               <a href="https://wa.me/212661044847" target="_blank">
-                <i class="ri-whatsapp-line"></i>
+                <i className="ri-whatsapp-line"></i>
               </a>
             </div>
           </div>
         </motion.div>
 
-        <div className="contact-form">
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          animate={{ x: [100, 0] }}
+          className="contact-form"
+        >
           <span className="circle one"></span>
           <span className="circle two"></span>
 
@@ -99,7 +103,7 @@ const Contact = () => {
               <h3 className="title">Contactez-nous</h3>
               <div className="input-container">
                 <input type="text" name="fullname" className="input" required />
-                <label for="">Nom complet</label>
+                <label htmlFor="">Nom complet</label>
                 <span>Nom Complet</span>
                 <ValidationError
                   prefix="Fullname"
@@ -109,7 +113,7 @@ const Contact = () => {
               </div>
               <div className="input-container">
                 <input type="email" name="email" className="input" required />
-                <label for="">Email</label>
+                <label htmlFor="">Email</label>
                 <span>Email</span>
                 <ValidationError
                   prefix="Email"
@@ -119,7 +123,7 @@ const Contact = () => {
               </div>
               <div className="input-container">
                 <input type="tel" name="phone" className="input" required />
-                <label for="">Téléphone</label>
+                <label htmlFor="">Téléphone</label>
                 <span>Téléphone</span>
                 <ValidationError
                   prefix="Phone"
@@ -129,7 +133,7 @@ const Contact = () => {
               </div>
               <div className="input-container textarea">
                 <textarea name="message" className="input" required></textarea>
-                <label for="">Message</label>
+                <label htmlFor="">Message</label>
                 <span>Message</span>
                 <ValidationError
                   prefix="Message"
@@ -142,7 +146,7 @@ const Contact = () => {
                 className="button form__button"
                 disabled={state.submitting}
               >
-                Envoyer <i class="ri-send-plane-line"></i>
+                Envoyer <i className="ri-send-plane-line"></i>
               </button>
             </form>
           ) : (
@@ -153,7 +157,7 @@ const Contact = () => {
               </h2>
             </div>
           )}
-        </div>
+        </motion.div>
       </motion.div>
     </motion.div>
   );
