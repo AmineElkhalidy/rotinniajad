@@ -58,13 +58,13 @@ const Contact = () => {
             <div className="information">
               <i className="ri-mail-line icon"></i>
               <a href="mailto:someone@example.com" target="_blank">
-                omarhaqouq@gmail.com
+                rotinniajad@gmail.com
               </a>
             </div>
             <div className="information">
               <i className="ri-phone-line icon"></i>
               <a href="tel: +212661044847" target="_blank">
-                +212661-044847
+                +212707090524
               </a>
             </div>
           </div>
@@ -78,7 +78,7 @@ const Contact = () => {
               <a href="https://www.instagram.com/rotin_niajad/" target="_blank">
                 <i className="ri-instagram-line"></i>
               </a>
-              <a href="https://wa.me/212661044847" target="_blank">
+              <a href="https://wa.me/212707090524" target="_blank">
                 <i className="ri-whatsapp-line"></i>
               </a>
             </div>
