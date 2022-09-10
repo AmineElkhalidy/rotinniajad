@@ -37,7 +37,7 @@ const Home = () => {
 
             <motion.div whileHover={{ scale: 1.1 }} whileFocus={{ scale: 1.1 }}>
               <Link to="/products" className="button home__button">
-                Commencer
+                découvrir nos produits
               </Link>
             </motion.div>
           </motion.div>
