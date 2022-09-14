@@ -20,10 +20,7 @@ const About = () => {
           className="about__data grid"
         >
           <div className="about__content ">
-            <h3 className="about__title">
-              <span>R</span>o<span>t</span>in <span>N</span>i<span>a</span>ja
-              <span>d</span>
-            </h3>
+            <h3 className="about__title">Rotin Niajad</h3>
             <p className="about__description">
               Rotin Niajad est un ensemble de personnes qualifiées, réunies pour
               fabriquer des produits maison époustouflants, livrés aux clients
