@@ -11,18 +11,6 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 0.25rem;
-
-    & span {
-      background: #fba81f;
-      background: linear-gradient(
-        90deg,
-        rgba(251, 168, 31, 1) 0%,
-        rgba(248, 117, 55, 1) 87%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
   }
 
   &__description {
