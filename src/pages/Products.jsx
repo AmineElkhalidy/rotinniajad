@@ -1,6 +1,9 @@
 import React from "react";
 import "./Products.scss";
 
+// MetaTags
+import MetaTags from "react-meta-tags";
+
 // motion
 import { motion } from "framer-motion";
 
@@ -12,20 +15,29 @@ import { Product } from "../components";
 
 const Products = () => {
   return (
-    <section className="products section">
-      <h2 className="section__title products__title">
-        Nos <span>Produits</span>
-      </h2>
+    <>
+      <MetaTags>
+        <title>Nos Produits</title>
+        <meta
+          name="description"
+          content="Découvrez nos derniers produits fabriqués avec qualité..."
+        />
+      </MetaTags>
+      <section className="products section">
+        <h2 className="section__title products__title">
+          Nos <span>Produits</span>
+        </h2>
 
-      <motion.div
-        whileInView={{ opacity: [0, 1] }}
-        className="products__container container grid"
-      >
-        {images.map((image, index) => (
-          <Product key={index} image={image} />
-        ))}
-      </motion.div>
-    </section>
+        <motion.div
+          whileInView={{ opacity: [0, 1] }}
+          className="products__container container grid"
+        >
+          {images.map((image, index) => (
+            <Product key={index} image={image} />
+          ))}
+        </motion.div>
+      </section>
+    </>
   );
 };
 
