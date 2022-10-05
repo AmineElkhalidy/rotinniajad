@@ -9,11 +9,9 @@ const Product = ({ image }) => {
     <motion.article
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
-      itemScope
-      itemType="https://schema.org/Product"
       className="card"
     >
-      <img itemProp="image" src={image} alt="Salon" className="card__img" />
+      <img src={image} alt="Salon" className="card__img" />
 
       <div className="card__buttons-container">
         <div className="card__buttons">
