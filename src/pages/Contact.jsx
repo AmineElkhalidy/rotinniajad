@@ -36,11 +36,11 @@ const Contact = () => {
   return (
     <>
       <MetaTags>
-        <title>Contactez-nous</title>
         <meta
           name="description"
           content="Si vous souhaitez nous joindre, n'hésitez pas à utiliser les ressources listées, ou le formulaire"
         />
+        <title>Contactez-nous</title>
       </MetaTags>
 
       <motion.div className="contact">

@@ -14,11 +14,12 @@ const About = () => {
   return (
     <>
       <MetaTags>
-        <title>À Propos de Nous</title>
         <meta
           name="description"
           content="Découvrez qui nous sommes, ce que nous faisons, où nous sommes situés à l'aide d'une vidéo youtuber..."
         />
+
+        <title>À Propos de Nous</title>
       </MetaTags>
       <section className="about section">
         <h2 className="section__title">

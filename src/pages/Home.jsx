@@ -17,11 +17,11 @@ const Home = () => {
   return (
     <>
       <MetaTags>
-        <title>Rotin Niajad - Meuble de maison</title>
         <meta
           name="description"
           content="Si vous souhaitez nous joindre, n'hésitez pas à utiliser les ressources listées, ou le formulaire"
         />
+        <title>Rotin Niajad - Meuble de maison</title>
       </MetaTags>
 
       <section className="home">

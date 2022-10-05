@@ -17,11 +17,11 @@ const Products = () => {
   return (
     <>
       <MetaTags>
-        <title>Nos Produits</title>
         <meta
           name="description"
           content="Découvrez nos derniers produits fabriqués avec qualité..."
         />
+        <title>Nos Produits</title>
       </MetaTags>
       <section className="products section">
         <h2 className="section__title products__title">
