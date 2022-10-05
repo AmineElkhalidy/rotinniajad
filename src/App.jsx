@@ -11,7 +11,7 @@ const TRACKING_ID = "UA-188085571-1";
 ReactGA.initialize(TRACKING_ID);
 
 // Pages
-import { Home, Products, Contact, About } from "./pages";
+import { Home, Products, Contact, About, NotFound } from "./pages";
 
 const App = () => {
   useEffect(() => {
@@ -25,6 +25,7 @@ const App = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/aboutus" element={<About />} />
         <Route path="/contactus" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

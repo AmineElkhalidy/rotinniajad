@@ -1,0 +1,12 @@
+.page-container {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page__title {
+  margin-bottom: 2rem;
+}

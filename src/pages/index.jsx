@@ -2,6 +2,7 @@ export { default as Home } from "./Home";
 export { default as Products } from "./Products";
 export { default as Contact } from "./Contact";
 export { default as About } from "./About";
+export { default as NotFound } from "./NotFound";
 
 // Images
 import Salon1 from "../assets/images/couch-01.jpg";
