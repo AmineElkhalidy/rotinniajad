@@ -1,6 +1,9 @@
 import React from "react";
 import "./Home.scss";
 
+// MetaTags
+import { MetaTags } from "react-meta-tags";
+
 // Routing
 import { Link } from "react-router-dom";
 
@@ -13,6 +16,14 @@ import { FaCouch } from "react-icons/fa";
 const Home = () => {
   return (
     <>
+      <MetaTags>
+        <title>Rotin Niajad - Meuble de maison</title>
+        <meta
+          name="description"
+          content="Si vous souhaitez nous joindre, n'hésitez pas à utiliser les ressources listées, ou le formulaire"
+        />
+      </MetaTags>
+
       <section className="home">
         <div className="home__container container grid">
           <motion.div

@@ -42,6 +42,7 @@ const Contact = () => {
           content="Si vous souhaitez nous joindre, n'hésitez pas à utiliser les ressources listées, ou le formulaire"
         />
       </MetaTags>
+
       <motion.div className="contact">
         <motion.div className="form">
           <motion.div
