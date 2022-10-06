@@ -29,9 +29,7 @@ const Navbar = () => {
           <li className="nav__item-desktop">
             <NavLink
               to="/"
-              className={({ isActive }) =>
-                isActive ? "active" : "nav__link-desktop"
-              }
+              className="nav__link-desktop"
               onClick={() => setOpen(false)}
             >
               Accueil
