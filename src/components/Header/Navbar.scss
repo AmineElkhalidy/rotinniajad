@@ -76,14 +76,16 @@
 
     border-left: 2px solid white;
 
-    transition: 0.3s;
+    transition: 0.4s;
     z-index: var(--z-fixed);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .nav__list {
-  padding: 5rem 0 0 3rem;
-
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;

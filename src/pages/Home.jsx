@@ -39,7 +39,6 @@ const Home = () => {
             animate={{ x: [-100, 0] }}
             className="home__data"
           >
-            <h2 className="home__subtitle">Bienvenue à</h2>
             <h1 className="home__title">Rotin Niajad</h1>
 
             <p className="home__description">
