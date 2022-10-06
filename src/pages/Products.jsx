@@ -2,7 +2,7 @@ import React from "react";
 import "./Products.scss";
 
 // MetaTags
-// import MetaTags from "react-meta-tags";
+import { Helmet } from "react-helmet";
 
 // motion
 import { motion } from "framer-motion";
@@ -16,13 +16,13 @@ import { Product } from "../components";
 const Products = () => {
   return (
     <>
-      {/* <MetaTags>
+      <Helmet>
         <meta
           name="description"
           content="Découvrez nos derniers produits fabriqués avec qualité..."
         />
         <title>Nos Produits</title>
-      </MetaTags> */}
+      </Helmet>
       <section className="products section">
         <h2 className="section__title products__title">
           Nos <span>Produits</span>

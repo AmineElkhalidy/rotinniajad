@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import "./Contact.scss";
 
-// MetaTags
-// import MetaTags from "react-meta-tags";
-
 // Motion
 import { motion } from "framer-motion";
 
 // Form Spree
 import { useForm, ValidationError } from "@formspree/react";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("xpznzzen");
@@ -35,13 +33,13 @@ const Contact = () => {
 
   return (
     <>
-      {/* <MetaTags>
+      <Helmet>
         <meta
           name="description"
           content="Si vous souhaitez nous joindre, n'hésitez pas à utiliser les ressources listées, ou le formulaire"
         />
         <title>Contactez-nous</title>
-      </MetaTags> */}
+      </Helmet>
 
       <motion.div className="contact">
         <motion.div className="form">

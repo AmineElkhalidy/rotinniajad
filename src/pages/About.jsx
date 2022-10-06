@@ -2,7 +2,7 @@ import React from "react";
 import "./About.scss";
 
 // MetaTags
-// import MetaTags from "react-meta-tags";
+import { Helmet } from "react-helmet";
 
 // Image
 import AboutImg from "../assets/images/rotin.jpg";
@@ -13,14 +13,14 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <>
-      {/* <MetaTags>
+      <Helmet>
         <meta
           name="description"
           content="Découvrez qui nous sommes, ce que nous faisons, où nous sommes situés à l'aide d'une vidéo youtuber..."
         />
 
         <title>À Propos de Nous</title>
-      </MetaTags> */}
+      </Helmet>
       <section className="about section">
         <h2 className="section__title">
           À Propos de <span>Nous</span>
