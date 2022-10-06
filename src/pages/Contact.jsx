@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Contact.scss";
 
 // MetaTags
-import MetaTags from "react-meta-tags";
+// import MetaTags from "react-meta-tags";
 
 // Motion
 import { motion } from "framer-motion";
@@ -35,13 +35,13 @@ const Contact = () => {
 
   return (
     <>
-      <MetaTags>
+      {/* <MetaTags>
         <meta
           name="description"
           content="Si vous souhaitez nous joindre, n'hésitez pas à utiliser les ressources listées, ou le formulaire"
         />
         <title>Contactez-nous</title>
-      </MetaTags>
+      </MetaTags> */}
 
       <motion.div className="contact">
         <motion.div className="form">

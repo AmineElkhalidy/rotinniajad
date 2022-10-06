@@ -2,7 +2,7 @@ import React from "react";
 import "./Products.scss";
 
 // MetaTags
-import MetaTags from "react-meta-tags";
+// import MetaTags from "react-meta-tags";
 
 // motion
 import { motion } from "framer-motion";
@@ -16,13 +16,13 @@ import { Product } from "../components";
 const Products = () => {
   return (
     <>
-      <MetaTags>
+      {/* <MetaTags>
         <meta
           name="description"
           content="Découvrez nos derniers produits fabriqués avec qualité..."
         />
         <title>Nos Produits</title>
-      </MetaTags>
+      </MetaTags> */}
       <section className="products section">
         <h2 className="section__title products__title">
           Nos <span>Produits</span>
