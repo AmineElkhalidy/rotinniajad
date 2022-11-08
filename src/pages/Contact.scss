@@ -227,11 +227,11 @@ textarea.input {
   font-size: 0.95rem;
 
   & i {
-    color: var(--second-color);
+    color: var(--first-color);
   }
 
   & a {
-    color: var(--second-color);
+    color: var(--first-color-lighten);
   }
 }
 
