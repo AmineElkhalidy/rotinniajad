@@ -28,16 +28,6 @@ const Navbar = () => {
         <ul className="nav__list-desktop">
           <li className="nav__item-desktop">
             <NavLink
-              to="/"
-              className="nav__link-desktop"
-              onClick={() => setOpen(false)}
-            >
-              Accueil
-            </NavLink>
-          </li>
-
-          <li className="nav__item-desktop">
-            <NavLink
               to="/products"
               className={({ isActive }) =>
                 isActive ? "active" : "nav__link-desktop"
@@ -81,12 +71,6 @@ const Navbar = () => {
           className="nav__menu"
         >
           <ul className="nav__list">
-            <li className="nav__item">
-              <Link to="/" className="nav__link" onClick={() => setOpen(false)}>
-                Accueil
-              </Link>
-            </li>
-
             <li className="nav__item">
               <Link
                 to="/products"
