@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="nav container">
       <Link to="/" className="nav__logo">
-        Rotin Niajad
+        Rotin
       </Link>
 
       <div className="nav__toggle" onClick={() => setOpen(true)}>

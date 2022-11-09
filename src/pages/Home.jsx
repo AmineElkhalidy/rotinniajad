@@ -4,6 +4,9 @@ import "./Home.scss";
 // MetaTags
 import { Helmet } from "react-helmet";
 
+// Typeit effect
+import TypeIt from "typeit-react";
+
 // Routing
 import { Link } from "react-router-dom";
 
@@ -39,7 +42,17 @@ const Home = () => {
             animate={{ x: [-100, 0] }}
             className="home__data"
           >
-            <h1 className="home__title">Rotin Niajad</h1>
+            <h1 className="home__title">
+              <TypeIt
+                options={{
+                  afterComplete: function (instance) {
+                    instance.destroy();
+                  },
+                }}
+              >
+                rotin niajad ~ Meuble de maison
+              </TypeIt>
+            </h1>
 
             <p className="home__description">
               Le meilleur endroit pour acheter des meubles de maison.
