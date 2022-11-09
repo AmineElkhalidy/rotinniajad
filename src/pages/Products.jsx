@@ -23,6 +23,7 @@ const Products = () => {
         />
         <title>Nos Produits</title>
       </Helmet>
+
       <section className="products section">
         <h2 className="section__title products__title">
           Nos <span>Produits</span>
