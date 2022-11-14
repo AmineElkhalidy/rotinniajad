@@ -16,13 +16,9 @@ import { Product } from "../components";
 const Products = () => {
   return (
     <>
-      {/* <Helmet>
-        <meta
-          name="description"
-          content="Découvrez nos derniers produits fabriqués avec qualité..."
-        />
+      <Helmet>
         <title>Nos Produits</title>
-      </Helmet> */}
+      </Helmet>
 
       <section className="products section">
         <h2 className="section__title products__title">
