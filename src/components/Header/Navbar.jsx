@@ -15,7 +15,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="nav container">
+    <nav className="nav nav__container">
       <Link to="/" className="nav__logo">
         Rotin Niajad
       </Link>

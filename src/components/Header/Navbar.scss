@@ -29,6 +29,12 @@
     }
   }
 
+  &__container {
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &__toggle {
     display: inline-flex;
     align-items: center;
@@ -64,6 +70,10 @@
 @media screen and (max-width: 767px) {
   .nav__menu-desktop {
     display: none;
+  }
+
+  .nav__container {
+    padding: 0 1rem;
   }
 
   .nav__menu {
@@ -142,6 +152,9 @@
 }
 
 @media screen and (min-width: 767px) {
+  .nav__container {
+    padding: 0 1rem;
+  }
   .nav__toggle svg {
     display: none;
   }
@@ -182,5 +195,11 @@
     &:hover::after {
       width: 100%;
     }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav__container {
+    padding: 0;
   }
 }
