@@ -25,13 +25,12 @@ const Products = () => {
           Nos <span>Produits</span>
         </h2>
 
-        <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          className="products__container container grid"
-        >
-          {images.map((image, index) => (
-            <Product key={index} image={image} />
-          ))}
+        <motion.div whileInView={{ opacity: [0, 1] }} className="flexed">
+          <div className="products__container">
+            {images.map((image, index) => (
+              <Product key={index} image={image} />
+            ))}
+          </div>
         </motion.div>
       </section>
     </>
