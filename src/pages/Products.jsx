@@ -21,17 +21,17 @@ const Products = () => {
       </Helmet>
 
       <section className="products section">
-        <h2 className="section__title products__title">
+        <h2 className="section__title">
           Nos <span>Produits</span>
         </h2>
 
-        <motion.div whileInView={{ opacity: [0, 1] }} className="flexed">
-          <div className="products__container">
+        <div className="flexed">
+          <div className="products__container grid">
             {images.map((image, index) => (
               <Product key={index} image={image} />
             ))}
           </div>
-        </motion.div>
+        </div>
       </section>
     </>
   );
