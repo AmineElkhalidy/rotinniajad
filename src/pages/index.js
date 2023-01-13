@@ -1,7 +1,10 @@
 import React from "react";
 
+// motion
+import motion from "framer-motion";
+
 const Home = () => {
-  return <div></div>;
+  return <section></section>;
 };
 
 export default Home;
