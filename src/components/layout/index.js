@@ -1,7 +1,7 @@
 import React from "react";
 
 // Header
-import Header from "./header/header";
+import Header from "./header";
 
 const Layout = ({ children }) => {
   return (
