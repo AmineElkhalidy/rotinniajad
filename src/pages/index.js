@@ -128,7 +128,7 @@ const Home = () => {
         {/* Container */}
         <motion.div>
           {/* Content container */}
-          <div className="pt-20 pb-10">
+          <div className="pt-20 pb-20">
             <h2 className="mb-8 text-2xl font-semibold text-center sm:mb-12 sm:text-3xl md:text-4xl lg:text-5xl">
               Nos Produits
             </h2>
