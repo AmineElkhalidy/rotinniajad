@@ -17,11 +17,9 @@ body {
 
 .gradient-text {
   background-image: linear-gradient(
-    108deg,
-    #b16cea 8%,
-    #ff5e69 40%,
-    #ff8a56 77%,
-    #ffa84b 91%
+    315deg,
+    var(--token-0245ad54-dffa-4280-9b49-9d43ad68acaa, rgb(102, 0, 255)) 0%,
+    var(--token-0c4c4e00-f4fc-4e6a-9a97-509a95a3e5d4, rgb(255, 0, 102)) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -30,10 +28,8 @@ body {
 
 .gradient-box {
   background-image: linear-gradient(
-    108deg,
-    #b16cea 8%,
-    #ff5e69 40%,
-    #ff8a56 77%,
-    #ffa84b 91%
+    315deg,
+    var(--token-0245ad54-dffa-4280-9b49-9d43ad68acaa, rgb(102, 0, 255)) 0%,
+    var(--token-0c4c4e00-f4fc-4e6a-9a97-509a95a3e5d4, rgb(255, 0, 102)) 100%
   );
 }
