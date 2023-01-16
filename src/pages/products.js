@@ -2,6 +2,19 @@ import React from "react";
 
 // head
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+
+// motion
+import { motion } from "framer-motion";
+
+// icons
+import {
+  PhoneIcon,
+  DevicePhoneMobileIcon,
+  ChatBubbleLeftIcon,
+  EnvelopeIcon,
+} from "@heroicons/react/24/outline";
 
 const Products = () => {
   return (
@@ -10,7 +23,147 @@ const Products = () => {
         <title>Our Products - Rotin Niajad</title>
       </Head>
 
-      <section></section>
+      <section className="w-full min-h-screen">
+        {/* Container */}
+        <motion.div className="py-20 ">
+          <h2 className="mt-4 mb-8 text-2xl font-semibold text-center sm:mb-12 sm:text-3xl md:text-4xl lg:text-5xl">
+            Découvrir nos <span className="gradient-text">produits</span>
+          </h2>
+
+          <div className="flex items-center justify-center h-full">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center">
+              <motion.div>
+                <div className="w-[275px] h-[300px]">
+                  <Image
+                    className="w-full h-full gradient-box"
+                    src={""}
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="flex justify-between p-6 bg-black-900">
+                  <Link href="tel:+212530098636">
+                    <PhoneIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="tel:+212707090524">
+                    <DevicePhoneMobileIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="https://wa.me/212707090524">
+                    <ChatBubbleLeftIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="mailto:omarhaqouq@gmail.com">
+                    <EnvelopeIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+                </div>
+              </motion.div>
+
+              <motion.div>
+                <div className="w-[275px] h-[300px]">
+                  <Image
+                    className="w-full h-full gradient-box"
+                    src={""}
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="flex justify-between p-6 bg-black-900">
+                  <Link href="">
+                    <PhoneIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="">
+                    <ChatBubbleLeftIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="">
+                    <EnvelopeIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+                </div>
+              </motion.div>
+
+              <motion.div>
+                <div className="w-[275px] h-[300px]">
+                  <Image
+                    className="w-full h-full gradient-box"
+                    src={""}
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="flex justify-between p-6 bg-black-900">
+                  <Link href="">
+                    <PhoneIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="">
+                    <ChatBubbleLeftIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="">
+                    <EnvelopeIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+                </div>
+              </motion.div>
+
+              <motion.div>
+                <div className="w-[275px] h-[300px]">
+                  <Image
+                    className="w-full h-full gradient-box"
+                    src={""}
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="flex justify-between p-6 bg-black-900">
+                  <Link href="">
+                    <PhoneIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="">
+                    <ChatBubbleLeftIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="">
+                    <EnvelopeIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+                </div>
+              </motion.div>
+
+              <motion.div>
+                <div className="w-[275px] h-[300px]">
+                  <Image
+                    className="w-full h-full gradient-box"
+                    src={""}
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="flex justify-between p-6 bg-black-900">
+                  <Link href="">
+                    <PhoneIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="">
+                    <ChatBubbleLeftIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+
+                  <Link href="">
+                    <EnvelopeIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                  </Link>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Next components
 import Head from "next/head";
@@ -13,14 +13,33 @@ import {
   ShieldCheckIcon,
   ClockIcon,
   TruckIcon,
-  PhoneIcon,
-  ChatBubbleLeftIcon,
+  ArrowDownIcon,
+  ArrowRightIcon,
+  ArrowUpIcon,
 } from "@heroicons/react/24/outline";
 
 // Data
 import { featuredImages } from "@/data/data";
 
 const Home = () => {
+  // Arrow up state
+  const [showArrow, setShowArrow] = useState(false);
+
+  // Function that keeps tracking the scroll event
+  const displayArrowUp = () => {
+    if (window.scrollY >= 500) {
+      setShowArrow(true);
+    } else {
+      setShowArrow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", displayArrowUp);
+
+    return () => window.removeEventListener("scroll", displayArrowUp);
+  }, []);
+
   return (
     <>
       <Head>
@@ -55,11 +74,18 @@ const Home = () => {
               </Link>
             </div>
           </div>
+
+          {/* Arrow Up Down */}
+          <div className="absolute bottom-1">
+            <a href="#services">
+              <ArrowDownIcon className="w-8 h-8 text-purple-700 cursor-pointer animate-bounce" />
+            </a>
+          </div>
         </motion.div>
       </section>
 
       {/* Features */}
-      <section className=" bg-black-900">
+      <section className=" bg-black-900" id="services">
         {/* Container */}
         <motion.div
           whileInView={{ opacity: [0, 0.25, 0.5, 0.75, 1] }}
@@ -144,15 +170,26 @@ const Home = () => {
 
             <div className="text-center">
               <Link
-                className="px-8 py-4 hover:text-black-900 text-white duration-300 gradient-box text-[18px] md:text-xl lg:text-2xl"
+                className="group px-8 py-4 text-white duration-300 inline-flex items-center gap-1 gradient-box text-[18px] md:text-xl lg:text-2xl"
                 href="/products"
               >
-                Explorez plus
+                Explorez plus{" "}
+                <ArrowRightIcon className="w-5 h-5 mt-[.15rem] group-hover:translate-x-2 duration-300 " />
               </Link>
             </div>
           </div>
         </motion.div>
       </section>
+
+      {/* Arrow up */}
+      {/* <a
+        href="#"
+        className={`fixed p-1.5 duration-300 opacity-50 right-2 bottom-2 gradient-box hover:opacity-100 ${
+          showArrow ? "right-2" : ""
+        }`}
+      >
+        <ArrowUpIcon className="w-6 h-6 text-white" />
+      </a> */}
     </>
   );
 };
