@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 
 // menu icon
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+// Icons
+import { HomeIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => {
   // menu state
@@ -19,16 +21,18 @@ const Navbar = () => {
       <div>
         <Link
           href="/"
-          className="text-xl font-medium tracking-widest cursor-pointer sm:hidden md:text-xl"
+          className="inline-flex items-center gap-2 text-xl font-medium tracking-widest cursor-pointer sm:hidden md:text-xl"
         >
-          RN
+          <HomeIcon className="w-6 h-6" />{" "}
+          <span className="mt-[.15rem]">RN</span>
         </Link>
 
         <Link
           href="/"
-          className="hidden text-xl font-medium uppercase cursor-pointer sm:inline md:text-xl"
+          className="hidden text-xl font-medium uppercase cursor-pointer sm:inline-flex sm:items-center sm:gap-2 md:text-xl"
         >
-          Rotin Niajad
+          <HomeIcon className="w-6 h-6" />{" "}
+          <span className="mt-[.15rem]">Rotin Niajad</span>
         </Link>
       </div>
 
