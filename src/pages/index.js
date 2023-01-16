@@ -17,12 +17,8 @@ import {
   ChatBubbleLeftIcon,
 } from "@heroicons/react/24/outline";
 
-const productsImages = [
-  { pOne: "" },
-  { pTwo: "" },
-  { pThree: "" },
-  { pFour: "" },
-];
+// Data
+import { featuredImages } from "@/data/data";
 
 const Home = () => {
   return (
@@ -135,10 +131,10 @@ const Home = () => {
 
             {/* Products container */}
             <div className="grid gap-6 mb-12 sm:gap-12 sm:mb-16 place-items-center sm:grid-cols-2 sm:px-12 md:grid-cols-3 lg:grid-cols-4">
-              {[1, 2, 3, 4].map((image, index) => (
+              {featuredImages.map((image, index) => (
                 <div key={index} className="w-[300px] h-[325px]">
                   <Image
-                    className="object-contain w-full h-full border-none gradient-box"
+                    className="object-cover w-full h-full border-none gradient-box"
                     src={image}
                     alt="featured product"
                   />
