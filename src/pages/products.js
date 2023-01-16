@@ -7,7 +7,7 @@ const Products = () => {
   return (
     <>
       <Head>
-        <title>Our Products</title>
+        <title>Our Products - Rotin Niajad</title>
       </Head>
 
       <section></section>

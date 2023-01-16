@@ -8,20 +8,28 @@ import { useRouter } from "next/router";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
+  // menu state
   const [activeMenu, setActiveMenu] = useState(false);
 
+  // router
   const router = useRouter();
 
   return (
-    <nav className="flex items-center justify-between h-16 max-w-6xl px-4 mx-auto duration-300 md:h-20 xl:px-0">
+    <nav className="flex items-center justify-between h-16 max-w-6xl px-4 mx-auto duration-300 md:h-[4.5rem] xl:px-0">
       <div>
-        <a className="text-xl font-medium tracking-widest cursor-pointer sm:hidden md:text-xl">
+        <Link
+          href="/"
+          className="text-xl font-medium tracking-widest cursor-pointer sm:hidden md:text-xl"
+        >
           RN
-        </a>
+        </Link>
 
-        <a className="hidden text-xl font-medium uppercase cursor-pointer sm:inline md:text-xl">
+        <Link
+          href="/"
+          className="hidden text-xl font-medium uppercase cursor-pointer sm:inline md:text-xl"
+        >
           Rotin Niajad
-        </a>
+        </Link>
       </div>
 
       {/* Mobile menu */}
