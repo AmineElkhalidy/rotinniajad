@@ -76,7 +76,7 @@ const Home = () => {
           </div>
 
           {/* Arrow Up Down */}
-          <div className="absolute bottom-4 sm:bottom-1">
+          <div className="absolute bottom-16 sm:bottom-1">
             <a href="#services">
               <ArrowDownIcon className="w-8 h-8 text-purple-700 cursor-pointer animate-bounce" />
             </a>
