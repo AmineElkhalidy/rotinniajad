@@ -60,25 +60,25 @@ const Navbar = () => {
               <ul className="flex flex-col gap-4 -mt-12 text-center">
                 <li className="text-lg font-medium hover:text-gray-500">
                   <Link onClick={() => setActiveMenu(false)} href="/">
-                    Home
+                    Accueil
                   </Link>
                 </li>
 
                 <li className="text-lg font-medium hover:text-gray-500">
                   <Link onClick={() => setActiveMenu(false)} href="/products">
-                    Products
+                    Produits
                   </Link>
                 </li>
 
                 <li className="text-lg font-medium hover:text-gray-500">
                   <Link onClick={() => setActiveMenu(false)} href="/about">
-                    About Us
+                    À propos
                   </Link>
                 </li>
 
                 <li className="text-lg font-medium hover:text-gray-500">
                   <Link onClick={() => setActiveMenu(false)} href="/contact">
-                    Contact Us
+                    Contactez-nous
                   </Link>
                 </li>
               </ul>
@@ -97,7 +97,7 @@ const Navbar = () => {
               }`}
               href="/"
             >
-              Home
+              Accueil
             </Link>
           </li>
 
@@ -108,7 +108,7 @@ const Navbar = () => {
               }`}
               href="/products"
             >
-              Products
+              Produits
             </Link>
           </li>
 
@@ -119,7 +119,7 @@ const Navbar = () => {
               }`}
               href="/about"
             >
-              About Us
+              À propos
             </Link>
           </li>
 
@@ -130,7 +130,7 @@ const Navbar = () => {
               }`}
               href="/contact"
             >
-              Contact Us
+              Contactez-nous
             </Link>
           </li>
         </ul>

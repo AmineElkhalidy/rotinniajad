@@ -33,7 +33,7 @@ const Footer = () => {
                 className="duration-300 sm:text-lg hover:text-gray-300"
                 href="/"
               >
-                Home
+                Accueil
               </Link>
             </li>
             <li>
@@ -41,7 +41,7 @@ const Footer = () => {
                 className="duration-300 sm:text-lg hover:text-gray-300"
                 href="/products"
               >
-                Products
+                Produits
               </Link>
             </li>
             <li>
@@ -49,7 +49,7 @@ const Footer = () => {
                 className="duration-300 sm:text-lg hover:text-gray-300"
                 href="/about"
               >
-                About Us
+                À propos
               </Link>
             </li>
             <li>
@@ -57,7 +57,7 @@ const Footer = () => {
                 className="duration-300 sm:text-lg hover:text-gray-300"
                 href="/contact"
               >
-                Contact Us
+                Contactez-nous
               </Link>
             </li>
           </ul>
