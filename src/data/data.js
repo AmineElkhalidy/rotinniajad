@@ -1,3 +1,5 @@
+import { images } from "@/assets/images/products";
+
 import FeaturedImg1 from "../assets/images/featured/featured-1.jpg";
 import FeaturedImg2 from "../assets/images/featured/featured-2.jpg";
 import FeaturedImg3 from "../assets/images/featured/featured-3.jpg";
@@ -9,3 +11,5 @@ export const featuredImages = [
   FeaturedImg3,
   FeaturedImg4,
 ];
+
+export default images;
