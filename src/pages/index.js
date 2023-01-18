@@ -160,7 +160,7 @@ const Home = () => {
               {featuredImages.map((image, index) => (
                 <div key={index} className="w-[300px] h-[325px]">
                   <Image
-                    className="object-cover w-full h-full border-none gradient-box"
+                    className="object-cover w-full h-full border-none"
                     src={image}
                     alt="featured product"
                   />
