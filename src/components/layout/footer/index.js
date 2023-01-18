@@ -64,7 +64,7 @@ const Footer = () => {
         </div>
 
         <p className="px-6 mt-20 text-center md:mt-24">
-          Designed & built by{" "}
+          Conçu et construit par{" "}
           <Link
             className="font-medium gradient-text"
             target="_blank"
