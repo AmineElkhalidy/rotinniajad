@@ -178,6 +178,27 @@ const Contact = () => {
                   </div>
                 </div>
 
+                {/* Email box */}
+                <div className="mb-6">
+                  <div className="">
+                    <label
+                      className="block mb-3 font-bold text-black-900"
+                      htmlFor="telephone"
+                    >
+                      Votre Numéro téléphone
+                    </label>
+
+                    <input
+                      className="w-full py-3 pl-6 bg-[#f2f6f7] border-none outline-none"
+                      type="text"
+                      name="telephone"
+                      id="telephone"
+                      placeholder="Entrer votre numéro de téléphone"
+                      required
+                    />
+                  </div>
+                </div>
+
                 {/* Message box */}
                 <div className="mb-6">
                   <div className="">
