@@ -71,12 +71,6 @@ const Navbar = () => {
                 </li>
 
                 <li className="text-lg font-medium hover:text-gray-500">
-                  <Link onClick={() => setActiveMenu(false)} href="/about">
-                    À propos
-                  </Link>
-                </li>
-
-                <li className="text-lg font-medium hover:text-gray-500">
                   <Link onClick={() => setActiveMenu(false)} href="/contact">
                     Contactez-nous
                   </Link>
@@ -109,17 +103,6 @@ const Navbar = () => {
               href="/products"
             >
               Produits
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              className={`font-medium text-[1.03rem] text-grey-800 ${
-                router.pathname === "/about" ? "gradient-text" : ""
-              }`}
-              href="/about"
-            >
-              À propos
             </Link>
           </li>
 

@@ -44,14 +44,7 @@ const Footer = () => {
                 Produits
               </Link>
             </li>
-            <li>
-              <Link
-                className="duration-300 sm:text-lg hover:text-gray-300"
-                href="/about"
-              >
-                À propos
-              </Link>
-            </li>
+
             <li>
               <Link
                 className="duration-300 sm:text-lg hover:text-gray-300"
