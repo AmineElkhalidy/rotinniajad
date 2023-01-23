@@ -178,7 +178,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Email box */}
+                {/* Phone number box */}
                 <div className="mb-6">
                   <div className="">
                     <label
@@ -190,7 +190,7 @@ const Contact = () => {
 
                     <input
                       className="w-full py-3 pl-6 bg-[#f2f6f7] border-none outline-none"
-                      type="text"
+                      type="tel"
                       name="telephone"
                       id="telephone"
                       placeholder="Entrer votre numéro de téléphone"
