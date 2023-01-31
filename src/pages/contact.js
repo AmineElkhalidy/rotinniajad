@@ -129,7 +129,7 @@ const Contact = () => {
                       Nom
                     </label>
                     <input
-                      className="w-full py-3 pl-6 bg-[#f2f6f7] border-none outline-none"
+                      className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
                       type="text"
                       name="first-name"
                       id="firstName"
@@ -147,7 +147,7 @@ const Contact = () => {
                       Prénom
                     </label>
                     <input
-                      className="w-full py-3 pl-6 bg-[#f2f6f7] border-none outline-none"
+                      className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
                       type="text"
                       name="last-name"
                       id="lastName"
@@ -168,7 +168,7 @@ const Contact = () => {
                     </label>
 
                     <input
-                      className="w-full py-3 pl-6 bg-[#f2f6f7] border-none outline-none"
+                      className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
                       type="text"
                       name="email"
                       id="email"
@@ -189,7 +189,7 @@ const Contact = () => {
                     </label>
 
                     <input
-                      className="w-full py-3 pl-6 bg-[#f2f6f7] border-none outline-none"
+                      className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
                       type="tel"
                       name="telephone"
                       id="telephone"
@@ -209,7 +209,7 @@ const Contact = () => {
                       Votre message ?
                     </label>
                     <textarea
-                      className="w-full pt-4 pl-6 outline-none border-none pb-24 bg-[#f2f6f7]"
+                      className="w-full pt-4 pl-6 outline-none duration-300 focus:border focus:border-purple-900 resize-none pb-24 bg-[#f2f6f7]"
                       name="message"
                       id="message"
                       maxLength="5000"
