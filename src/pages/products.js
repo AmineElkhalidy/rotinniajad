@@ -9,12 +9,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 // icons
-import {
-  PhoneIcon,
-  DevicePhoneMobileIcon,
-  ChatBubbleLeftIcon,
-  EnvelopeIcon,
-} from "@heroicons/react/24/outline";
+import { PhoneIcon } from "@heroicons/react/24/outline";
+import { BsWhatsapp } from "react-icons/bs";
 
 // Data
 import images from "@/data/data";
@@ -54,16 +50,8 @@ const Products = () => {
                       <PhoneIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
                     </Link>
 
-                    <Link href="tel:+212707090524">
-                      <DevicePhoneMobileIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
-                    </Link>
-
                     <Link href="https://wa.me/212707090524">
-                      <ChatBubbleLeftIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
-                    </Link>
-
-                    <Link href="mailto:omarhaqouq@gmail.com">
-                      <EnvelopeIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
+                      <BsWhatsapp className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
                     </Link>
                   </div>
                 </motion.div>
