@@ -23,7 +23,20 @@ import { featuredImages } from "@/data/data";
 
 const Home = () => {
   // Arrow up state
-  const [showArrow, setShowArrow] = useState(false);
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY) setShow(true);
+      else setShow(false);
+    });
+
+    return () =>
+      window.removeEventListener("scroll", () => {
+        if (window.scrollY) setShow(true);
+        else setShow(false);
+      });
+  }, []);
 
   return (
     <>
@@ -37,7 +50,11 @@ const Home = () => {
         {/* Hero */}
         <section className="relative min-h-screen">
           {/* Container */}
-          <motion.div className="flex items-center justify-center h-screen px-6 sm:px-0">
+          <motion.div
+            whileInView={{ y: [100, 50, 0], opacity: [0, 0.5, 1] }}
+            transition={{ duration: 0.3 }}
+            className="flex items-center justify-center h-screen px-6 sm:px-0"
+          >
             {/* Content container */}
             <div>
               <h1 className="mb-3 text-2xl text-center sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
@@ -74,8 +91,8 @@ const Home = () => {
         <section className=" bg-black-900" id="services">
           {/* Container */}
           <motion.div
-            whileInView={{ opacity: [0, 0.25, 0.5, 0.75, 1] }}
-            transition={{ duration: 1, ease: "easeIn" }}
+            whileInView={{ opacity: [0, 0.5, 1] }}
+            transition={{ duration: 0.3 }}
           >
             {/* Content container */}
             <div className="py-20">
@@ -134,7 +151,7 @@ const Home = () => {
         {/* Products */}
         <section>
           {/* Container */}
-          <motion.div>
+          <motion.div whileInView={{ opacity: [0, 1] }}>
             {/* Content container */}
             <div className="pt-20 pb-20">
               <h2 className="mb-8 text-2xl font-semibold text-center sm:mb-12 sm:text-3xl md:text-4xl lg:text-5xl">
@@ -171,7 +188,7 @@ const Home = () => {
         <a
           href="#"
           className={`fixed p-1.5 duration-300 opacity-50 -right-10 bottom-2 gradient-box hover:opacity-100 ${
-            showArrow ? "right-2" : ""
+            show ? "right-2" : ""
           }`}
         >
           <ArrowUpIcon className="w-6 h-6 text-white" />
