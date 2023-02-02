@@ -120,147 +120,162 @@ const Contact = () => {
             </div>
 
             {/* Form Container */}
-            <div className="mb-24">
-              <form
-                onSubmit={handleSubmit}
-                className="max-w-xl"
-                action="https://formspree.io/f/xpznzzen"
-                method="POST"
-              >
-                {/* First and Last name box */}
-                <div className="flex flex-col mb-6 sm:gap-6 sm:flex-row sm:mb-0">
-                  {/* First name box */}
-                  <div className="mb-6 sm:w-[50%]">
-                    <label
-                      className="block mb-3 font-bold text-black-900"
-                      htmlFor="firstName"
-                    >
-                      Nom
-                    </label>
-                    <input
-                      className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
-                      type="text"
-                      name="first-name"
-                      id="firstName"
-                      placeholder="Nom"
-                      required
-                    />
+            {state.succeeded ? (
+              <div className="mb-24">
+                <p className="text-xl font-semibold text-center sm:text-2xl lg:mt-20">
+                  <span className="gradient-text">Thank you</span> for your
+                  message, we&apos;ll get back to you
+                  <span className="gradient-text"> as soon as possible</span>.
+                </p>
+              </div>
+            ) : (
+              <div className="mb-24">
+                <form
+                  onSubmit={handleSubmit}
+                  className="max-w-xl"
+                  action="https://formspree.io/f/xpznzzen"
+                  method="POST"
+                >
+                  {/* First and Last name box */}
+                  <div className="flex flex-col mb-6 sm:gap-6 sm:flex-row sm:mb-0">
+                    {/* First name box */}
+                    <div className="mb-6 sm:w-[50%]">
+                      <label
+                        className="block mb-3 font-bold text-black-900"
+                        htmlFor="firstName"
+                      >
+                        Prénom
+                      </label>
+                      <input
+                        className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
+                        type="text"
+                        name="first-name"
+                        id="firstName"
+                        placeholder="Prénom"
+                        required
+                      />
+                      <ValidationError
+                        prefix="FirstName"
+                        field="first-name"
+                        errors={state.errors}
+                      />
+                    </div>
+
+                    {/* Last name box */}
+                    <div className="sm:w-[50%]">
+                      <label
+                        className="block mb-3 font-bold text-black-900"
+                        htmlFor="lastName"
+                      >
+                        Nom
+                      </label>
+                      <input
+                        className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
+                        type="text"
+                        name="last-name"
+                        id="lastName"
+                        placeholder="Nom"
+                        required
+                      />
+                      <ValidationError
+                        prefix="LastName"
+                        field="last-name"
+                        errors={state.errors}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Email box */}
+                  <div className="mb-6">
+                    <div className="">
+                      <label
+                        className="block mb-3 font-bold text-black-900"
+                        htmlFor="email"
+                      >
+                        Votre E-mail
+                      </label>
+                      <input
+                        className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Entrer votre e-mail"
+                        required
+                      />
+                      <ValidationError
+                        prefix="Email"
+                        field="email"
+                        errors={state.errors}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Phone number box */}
+                  <div className="mb-6">
+                    <div className="">
+                      <label
+                        className="block mb-3 font-bold text-black-900"
+                        htmlFor="telephone"
+                      >
+                        Votre Numéro téléphone
+                      </label>
+
+                      <input
+                        className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
+                        type="tel"
+                        name="telephone"
+                        id="telephone"
+                        placeholder="Entrer votre numéro de téléphone"
+                        required
+                      />
+                    </div>
                     <ValidationError
-                      prefix="firstName"
-                      field="first-name"
+                      prefix="Telephone"
+                      field="telephone"
                       errors={state.errors}
                     />
                   </div>
 
-                  {/* Last name box */}
-                  <div className="sm:w-[50%]">
-                    <label
-                      className="block mb-3 font-bold text-black-900"
-                      htmlFor="lastName"
-                    >
-                      Prénom
-                    </label>
-                    <input
-                      className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
-                      type="text"
-                      name="last-name"
-                      id="lastName"
-                      placeholder="Prénom"
-                      required
-                    />
+                  {/* Message box */}
+                  <div className="mb-6">
+                    <div className="">
+                      <label
+                        className="block mb-3 font-bold text-black-900"
+                        htmlFor="message"
+                      >
+                        Votre message ?
+                      </label>
+                      <textarea
+                        className="w-full pt-4 pl-6 outline-none duration-300 focus:border focus:border-purple-900 resize-none pb-24 bg-[#f2f6f7]"
+                        name="message"
+                        id="message"
+                        maxLength="5000"
+                        placeholder="Expliqué ici!"
+                        autoCorrect="false"
+                      ></textarea>
+                      <ValidationError
+                        prefix="Message"
+                        field="message"
+                        errors={state.errors}
+                      />
+                    </div>
                   </div>
-                </div>
 
-                {/* Email box */}
-                <div className="mb-6">
-                  <div className="">
-                    <label
-                      className="block mb-3 font-bold text-black-900"
-                      htmlFor="email"
+                  {/* Button box */}
+                  <div className="relative">
+                    <button
+                      className="inline-block px-[48.5px] py-[1.26rem] bg-black-900 text-white cursor-pointer text-lg duration-300 font-nav font-semibold z-10 hover:translate-x-2 hover:translate-y-2"
+                      href="#contact"
+                      type="submit"
+                      disabled={state.submitting}
                     >
-                      Votre E-mail
-                    </label>
-                    <input
-                      className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
-                      type="text"
-                      name="email"
-                      id="email"
-                      placeholder="Entrer votre e-mail"
-                      required
-                    />
-                    <ValidationError
-                      prefix="Email"
-                      field="email"
-                      errors={state.errors}
-                    />
+                      Envoyer
+                    </button>
+                    <span className="gradient-box absolute -z-10 top-2 left-2 px-[5.25rem] py-[2.15rem] bg-red-500" />
                   </div>
-                </div>
-
-                {/* Phone number box */}
-                <div className="mb-6">
-                  <div className="">
-                    <label
-                      className="block mb-3 font-bold text-black-900"
-                      htmlFor="telephone"
-                    >
-                      Votre Numéro téléphone
-                    </label>
-
-                    <input
-                      className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
-                      type="tel"
-                      name="telephone"
-                      id="telephone"
-                      placeholder="Entrer votre numéro de téléphone"
-                      required
-                    />
-                  </div>
-                  <ValidationError
-                    prefix="Telephone"
-                    field="telephone"
-                    errors={state.errors}
-                  />
-                </div>
-
-                {/* Message box */}
-                <div className="mb-6">
-                  <div className="">
-                    <label
-                      className="block mb-3 font-bold text-black-900"
-                      htmlFor="message"
-                    >
-                      Votre message ?
-                    </label>
-                    <textarea
-                      className="w-full pt-4 pl-6 outline-none duration-300 focus:border focus:border-purple-900 resize-none pb-24 bg-[#f2f6f7]"
-                      name="message"
-                      id="message"
-                      maxLength="5000"
-                      placeholder="Expliqué ici!"
-                      autoCorrect="false"
-                    ></textarea>
-                    <ValidationError
-                      prefix="Message"
-                      field="message"
-                      errors={state.errors}
-                    />
-                  </div>
-                </div>
-
-                {/* Button box */}
-                <div className="relative">
-                  <button
-                    className="inline-block px-[48.5px] py-[1.26rem] bg-black-900 text-white cursor-pointer text-lg duration-300 font-nav font-semibold z-10 hover:translate-x-2 hover:translate-y-2"
-                    href="#contact"
-                    type="submit"
-                    disabled={""}
-                  >
-                    Envoyer
-                  </button>
-                  <span className="gradient-box absolute -z-10 top-2 left-2 px-[5.25rem] py-[2.15rem] bg-red-500" />
-                </div>
-              </form>
-            </div>
+                </form>
+              </div>
+            )}
           </div>
         </motion.div>
       </section>
