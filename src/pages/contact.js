@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // head
 import Head from "next/head";
