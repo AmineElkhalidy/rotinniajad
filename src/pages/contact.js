@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 // head
 import Head from "next/head";
 import Link from "next/link";
+
+// formspree
+import { useForm, ValidationError } from "@formspree/react";
 
 // motion
 import { motion } from "framer-motion";
@@ -11,6 +14,7 @@ import { motion } from "framer-motion";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/react/24/solid";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xpznzzen");
   return (
     <>
       <Head>
@@ -117,7 +121,12 @@ const Contact = () => {
 
             {/* Form Container */}
             <div className="mb-24">
-              <form onSubmit={""} className="max-w-xl" action="#">
+              <form
+                onSubmit={handleSubmit}
+                className="max-w-xl"
+                action="https://formspree.io/f/xpznzzen"
+                method="POST"
+              >
                 {/* First and Last name box */}
                 <div className="flex flex-col mb-6 sm:gap-6 sm:flex-row sm:mb-0">
                   {/* First name box */}
@@ -135,6 +144,11 @@ const Contact = () => {
                       id="firstName"
                       placeholder="Nom"
                       required
+                    />
+                    <ValidationError
+                      prefix="firstName"
+                      field="first-name"
+                      errors={state.errors}
                     />
                   </div>
 
@@ -166,7 +180,6 @@ const Contact = () => {
                     >
                       Votre E-mail
                     </label>
-
                     <input
                       className="w-full py-3 pl-6 bg-[#f2f6f7] duration-300 focus:border focus:border-purple-900 outline-none"
                       type="text"
@@ -174,6 +187,11 @@ const Contact = () => {
                       id="email"
                       placeholder="Entrer votre e-mail"
                       required
+                    />
+                    <ValidationError
+                      prefix="Email"
+                      field="email"
+                      errors={state.errors}
                     />
                   </div>
                 </div>
@@ -197,6 +215,11 @@ const Contact = () => {
                       required
                     />
                   </div>
+                  <ValidationError
+                    prefix="Telephone"
+                    field="telephone"
+                    errors={state.errors}
+                  />
                 </div>
 
                 {/* Message box */}
@@ -216,6 +239,11 @@ const Contact = () => {
                       placeholder="Expliqué ici!"
                       autoCorrect="false"
                     ></textarea>
+                    <ValidationError
+                      prefix="Message"
+                      field="message"
+                      errors={state.errors}
+                    />
                   </div>
                 </div>
 
