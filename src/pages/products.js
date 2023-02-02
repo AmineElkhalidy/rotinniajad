@@ -46,7 +46,7 @@ const Products = () => {
                   </div>
 
                   <div className="flex justify-between p-6 bg-black-900">
-                    <Link href="tel:+212530098636">
+                    <Link href="tel:+212707090524">
                       <PhoneIcon className="text-white duration-300 cursor-pointer w-7 h-7 hover:text-purple-500" />
                     </Link>
 
