@@ -3,11 +3,26 @@ import "@/styles/globals.css";
 // Head
 import Head from "next/head";
 import Script from "next/script";
+import { useRouter } from "next/router";
+
+import { useEffect } from "react";
 
 // Layout
 import { Layout } from "@/components";
+import * as gtag from "../lib/gtag";
 
 export default function App({ Component, pageProps }) {
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
       <Head>
